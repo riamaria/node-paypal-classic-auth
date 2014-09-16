@@ -39,12 +39,12 @@ To run in a specific environment (i.e. live), run `geddy -e [ENVIRONMENT]`
 
 To run this app, you need a Business PayPal Account with the proper API credentials, permissions, and settings.
 
-### How to Obtain a Business Account for the Sandbox Environment
+### How to create a Sandbox Business Account
 
 1. Log in with an existing PayPal account to access the PayPal Developer website at [developer.paypal.com](https://developer.paypal.com/).
 2. Create a new Business Sandbox account `Dashboard > Sandbox Accounts > Create Account`. Tick the checkbox for **Log In with PayPal** and fill out the required information. You can use dummy URLs for the Privacy Policy and User Agreement URLs.
 3. Back at the Sandbox Accounts page, expand the new account and click `Profile`. Take note of the **Classic API credentials** (username, password, and signature).
-5. Enable the **Account Authentication Service** privilege for your newly created Business Sandbox Account. The Account Authentication Service privilege can be requested from the PayPal Merchant Technical Support at [ppmts.custhelp.com](https://ppmts.custhelp.com).
+4. Enable the **Account Authentication Service** privilege for your newly created Business Sandbox Account. The Account Authentication Service privilege can be requested from the PayPal Merchant Technical Support at [ppmts.custhelp.com](https://ppmts.custhelp.com).
 
 While your account has not been enabled for the Account Authentication Service, you will get an error when trying to obtain an access token.
 
