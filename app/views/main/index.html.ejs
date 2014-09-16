@@ -1,0 +1,19 @@
+<% if (!userInfo) { %>
+  Nothing to see here. Go auth yourself.
+<% } else { %>
+<% for(var i in userInfo) { -%>
+  <div class="row list-item">
+    <div class="span3">
+      <strong><%= i %></strong>
+    </div>
+    <div class="span8">
+      <%= userInfo[i] %>
+    </div>
+  </div>
+<% } %>
+<div class="row list-item">
+  <div class="span11">
+    <span class="pull-right"><strong><%- linkTo('Log Out', '/logout') %></strong></span>
+  </div>
+</div>
+<% } %>

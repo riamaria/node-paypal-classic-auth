@@ -1,0 +1,32 @@
+<%= partial('layout_header'); %>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="i-bar"><i class="icon-chevron-down icon-white"></i></span>
+          </a>
+          <%- linkTo('PayPal Auth Example', mainsPath, {class: 'brand'}) %>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><%- linkTo('Home', mainsPath) %></li>
+              <% if (!session.get('userInfo')) { %>
+              <li><%- linkTo('Authenticate', '/auth/paypal'); %></li>
+              <% } %>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <%- displayFlash(flash); %>
+      <div class="well well-small">
+        <%- render(); %>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <small><a href="https://developer.paypal.com/docs/classic/account-auth-service/gs_account_auth_service/">Docs</small>
+    </div>
+  </body>
+<%= partial('layout_footer'); %>
+
